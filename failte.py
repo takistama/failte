@@ -7,11 +7,11 @@ WELCOME_CHANNEL_ID = ID
 
 failte = Bot(command_prefix = BOT_PREFIX)
 
-@bot.event
+@failte.event
 async def on_ready():
     print("Logged in as "+failte.user.name)
 
-@bot.event
+@failte.event
 async def on_member_join(member):
     await failte.wait_until_ready()
     try:
